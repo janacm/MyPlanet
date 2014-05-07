@@ -22,9 +22,9 @@
     <header class="row">
       <div class="logo col-sm-12">
         <img src="images/logo.png" alt="" />
-        <h1>Corporate Pirates</h1>
+        <h1>Team, The</h1>
         <div class="tagline">
-          Really good coffee.
+          Good Environment, Great Coffee
         </div>
       </div>
     </header>
@@ -34,11 +34,54 @@
       <form name="ratingForm" ng-submit="addReview();">
 
         <!-- Select - Blend -->
-        <div class="blend-review-group form-group col-sm-4">
+        <!-- <div class="blend-review-group form-group col-sm-4">
           <label for="new-blend-review">Choose a blend</label>
           <select ng-model="newBlend" name="new-blend-review" class="new-blend-review form-control">
             <option ng-repeat="type in types" value="{{type}}">{{type}}</option>
           </select>
+        </div> -->
+
+        <label for="new-blend-review">Choose a blend</label>
+        <ul>
+          <td ng-repeat="type in types" value="{{type}}"><a href="houseBlend.html">{{type}}</a></li>
+        </ul>
+
+        <div style="float:left;" class="col-sm-6">
+        <table>
+            <div ng-repeat="row in [0,1,2]"></div>
+                <tr>
+                    <td ng-repeat="col in [1,2,3,4]"><a href="houseBlend.html"><img src="images/coffee{{$parent.row*4+col}}.jpg"></a></td>
+                    <!-- <td><a href="houseBlend.html"><img src="images/coffee2.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee3.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee4.jpg"></a></td> -->
+                </tr>
+                <!-- <tr>
+                    <td ng-repeat="type in types" ng-if="$index < 4" value="{{type}}">
+                        <a href="houseBlend.html">{{type}}</a></li>
+                    </td>
+                </tr> -->
+                <!-- <tr>
+                    <td><a href="houseBlend.html"><img src="images/coffee5.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee6.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee7.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee8.jpg"></a></td>
+                </tr> -->
+                <!-- <tr>
+                    <td ng-repeat="type in types" ng-if="$index < 9 && $index > 4" value="{{type}}">
+                        <a href="houseBlend.html">{{type}}</a></li>
+                </tr>
+                <tr>
+                    <td><a href="houseBlend.html"><img src="images/coffee9.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee1.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee3.jpg"></a></td>
+                    <td><a href="houseBlend.html"><img src="images/coffee2.jpg"></a></td>
+                </tr>
+                <tr>
+                    <td ng-repeat="type in types" ng-if="$index < 12 && $index > 4" value="{{type}}">
+                        <a href="houseBlend.html">{{type}}</a></li>
+                </tr> -->
+            <!-- </td> -->
+        </table>
         </div>
 
         <!-- Radio - Rating -->
